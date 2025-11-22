@@ -30,7 +30,7 @@ PORT=3001
 DB_HOST=localhost
 DB_USER=your_username
 DB_PASSWORD=your_password
-DB_NAME=link_shortener
+DB_NAME=shortlinks
 CLIENT_BASE_URL=http://localhost:3001
 FRONTEND_URL=http://localhost:3000
 ```
