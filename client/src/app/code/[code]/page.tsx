@@ -4,16 +4,17 @@ import Footer from "@/components/common/Footer";
 import LinkStatisticsInteractive from "../components/LinkStatisticsInteractive";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     code: string;
-  };
+  }>;
 }
+export default async function LinkStatisticsDetailPage({ params }: PageProps) {
+  const { code } = await params;
 
-export default function LinkStatisticsDetailPage({ params }: PageProps) {
   const breadcrumbItems = [
     { label: "Dashboard", path: "/" },
     { label: "Link Statistics", path: "/code" },
-    { label: params.code },
+    { label: code },
   ];
 
   return (
@@ -28,16 +29,14 @@ export default function LinkStatisticsDetailPage({ params }: PageProps) {
           <div className="mb-6 sm:mb-8">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-2 break-words">
               Detailed Analytics for{" "}
-              <code className="text-primary font-mono text-lg sm:text-xl lg:text-2xl">
-                {params.code}
-              </code>
+              <code className="text-primary font-mono text-lg sm:text-xl lg:text-2xl">{code}</code>
             </h1>
             <p className="text-sm sm:text-base text-muted-foreground">
               Comprehensive analytics and performance insights for this shortened link
             </p>
           </div>
 
-          <LinkStatisticsInteractive code={params.code} />
+          <LinkStatisticsInteractive code={code} />
         </div>
       </main>
       <Footer />
