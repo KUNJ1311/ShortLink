@@ -21,7 +21,8 @@ const LinkCreationForm = ({ onLinkCreated }: LinkCreationFormProps) => {
   const [showSuccess, setShowSuccess] = useState(false);
 
   // Reserved routes that cannot be used as short codes
-  const RESERVED_ROUTES = ["dashboard", "healthz"];
+  const RESERVED_ROUTES = ["dashboard", "healthz", "code"];
+  const RESERVED_PREFIXES = [".swa", "site", "_next", "api"];
 
   const validateUrl = (urlString: string): boolean => {
     try {
@@ -39,7 +40,11 @@ const LinkCreationForm = ({ onLinkCreated }: LinkCreationFormProps) => {
   };
 
   const isReservedCode = (code: string): boolean => {
-    return RESERVED_ROUTES.includes(code.toLowerCase());
+    const lowerCode = code.toLowerCase();
+    // Check exact matches
+    if (RESERVED_ROUTES.includes(lowerCode)) return true;
+    // Check prefixes
+    return RESERVED_PREFIXES.some((prefix) => lowerCode.startsWith(prefix.toLowerCase()));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
