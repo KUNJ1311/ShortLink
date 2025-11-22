@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Icon from "@/components/ui/AppIcon";
+import Image from "next/image";
 
 interface NavigationItem {
   label: string;
@@ -44,7 +45,7 @@ const Header = () => {
           className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
           aria-label="ShortLink Home"
         >
-          <Icon name="LinkIcon" size={32} className="text-primary" />
+          <Image src="/logo.svg" alt="ShortLink Logo" width={35} height={35} />
           <span className="text-xl font-semibold text-foreground">ShortLink</span>
         </Link>
 
