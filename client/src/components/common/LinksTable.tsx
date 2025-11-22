@@ -214,7 +214,9 @@ const LinksTable = ({
             <h3 className="text-lg font-medium text-foreground mb-1">
               {emptyTitle || defaultEmptyTitle}
             </h3>
-            <p className="text-muted-foreground max-w-sm">{emptyDescription || defaultEmptyDescription}</p>
+            <p className="text-muted-foreground max-w-sm">
+              {emptyDescription || defaultEmptyDescription}
+            </p>
           </div>
         ) : (
           <>

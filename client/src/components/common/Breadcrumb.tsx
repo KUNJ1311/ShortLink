@@ -21,7 +21,11 @@ const Breadcrumb = ({ items }: BreadcrumbProps) => {
         return (
           <div key={index} className="flex items-center gap-2">
             {index > 0 && (
-              <Icon name="ChevronRightIcon" size={16} className="text-muted-foreground flex-shrink-0" />
+              <Icon
+                name="ChevronRightIcon"
+                size={16}
+                className="text-muted-foreground flex-shrink-0"
+              />
             )}
 
             {item.path && !isLast ? (

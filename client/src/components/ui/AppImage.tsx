@@ -73,7 +73,7 @@ function AppImage({
           className={`relative ${className}`}
           style={{ width: width || "100%", height: height || "100%" }}
         >
-          <img
+          <Image
             src={imageSrc}
             alt={alt}
             className={`${commonClassName} absolute inset-0 w-full h-full object-cover`}
@@ -88,7 +88,7 @@ function AppImage({
     }
 
     return (
-      <img
+      <Image
         src={imageSrc}
         alt={alt}
         className={commonClassName}
