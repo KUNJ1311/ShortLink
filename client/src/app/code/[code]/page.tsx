@@ -1,15 +1,16 @@
+"use client";
 import Header from "@/components/common/Header";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Footer from "@/components/common/Footer";
 import LinkStatisticsInteractive from "../components/LinkStatisticsInteractive";
 
 interface PageProps {
-  params: Promise<{
+  params: {
     code: string;
-  }>;
+  };
 }
-export default async function LinkStatisticsDetailPage({ params }: PageProps) {
-  const { code } = await params;
+export default function LinkStatisticsDetailPage({ params }: PageProps) {
+  const { code } = params;
 
   const breadcrumbItems = [
     { label: "Dashboard", path: "/" },
