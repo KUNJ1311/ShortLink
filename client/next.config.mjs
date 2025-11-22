@@ -6,7 +6,8 @@ const nextConfig = {
 
     return [
       {
-        source: "/:path((?!code|healthz|_next|api|\\.swa|site|favicon|apple-touch-icon).*)",
+        source:
+          "/:path((?!_next/|static/|favicon.ico|apple-touch-icon|manifest|site|api/|healthz|code).*)",
         destination: `${apiUrl}/:path`,
       },
     ];
