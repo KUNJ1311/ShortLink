@@ -14,12 +14,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
-    "start": "node .next/standalone/server.js",
+    "build": "next build",
+    "start": "node server.js",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md,json}\"",
-    "serve": "node .next/standalone/server.js",
+    "serve": "node server.js",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
