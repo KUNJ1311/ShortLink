@@ -91,7 +91,7 @@ const createLink = async (req, res) => {
 		res.status(201).json({
 			code,
 			original_url,
-			short_url: `${process.env.BASE_URL}/${code}`,
+			short_url: `${process.env.CLIENT_BASE_URL}/${code}`,
 		});
 	} catch (error) {
 		console.error("Error creating link:", error);
@@ -151,7 +151,7 @@ const listLinks = async (req, res) => {
 
 		const links = rows.map((link) => ({
 			...link,
-			short_url: `${process.env.BASE_URL}/${link.code}`,
+			short_url: `${process.env.CLIENT_BASE_URL}/${link.code}`,
 		}));
 
 		res.json({
@@ -278,7 +278,7 @@ const redirectLink = async (req, res) => {
 		const [rows] = await pool.query("SELECT id, original_url FROM links WHERE code = ?", [code]);
 
 		if (rows.length === 0) {
-			const frontendUrl = process.env.BASE_URL || "http://localhost:3000";
+			const frontendUrl = process.env.CLIENT_BASE_URL || "http://localhost:3000";
 			const html404 = generate404Page(code, frontendUrl);
 			return res.status(404).send(html404);
 		}

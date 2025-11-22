@@ -31,7 +31,7 @@ DB_HOST=localhost
 DB_USER=your_username
 DB_PASSWORD=your_password
 DB_NAME=link_shortener
-BASE_URL=http://localhost:3001
+CLIENT_BASE_URL=http://localhost:3001
 FRONTEND_URL=http://localhost:3000
 ```
 
