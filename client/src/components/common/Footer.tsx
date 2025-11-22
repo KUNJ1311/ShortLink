@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
           {/* Brand Section */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex items-center gap-2 mb-2">
-              <Icon name="LinkIcon" size={24} className="text-primary" />
-              <h3 className="text-lg font-bold text-foreground">LinkShort</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <Icon name="LinkIcon" size={28} className="text-primary" />
+              <h3 className="text-lg font-bold text-foreground">ShortLink</h3>
             </div>
             <p className="text-sm text-muted-foreground text-center md:text-left">
               Fast, simple, and reliable URL shortener with analytics.
@@ -88,7 +88,7 @@ const Footer = () => {
               </span>
             </div>
             <div className="flex items-center gap-4">
-              <span>© {currentYear} LinkShort</span>
+              <span>© {currentYear} ShortLink</span>
               <span className="hidden sm:inline">•</span>
               <span className="text-xs">v1.0.0</span>
             </div>

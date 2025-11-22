@@ -1,6 +1,6 @@
-# LinkShort Server
+# ShortLink Server
 
-Backend API for LinkShort - A URL shortening service built with Express.js and MySQL.
+Backend API for ShortLink - A URL shortening service built with Express.js and MySQL.
 
 ## Features
 
