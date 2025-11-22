@@ -104,16 +104,27 @@ const SystemHealthInteractive = () => {
     },
     {
       title: "Database Connection",
-      status: healthData?.services.database === "operational" ? "operational" : "down",
-      value: healthData?.services.database === "operational" ? "Connected" : "Disconnected",
-      description:
-        healthData?.services.database === "operational" ? "Pool active" : "Connection failed",
+      status: error
+        ? "down"
+        : healthData?.services.database === "operational"
+          ? "operational"
+          : "down",
+      value: error
+        ? "Disconnected"
+        : healthData?.services.database === "operational"
+          ? "Connected"
+          : "Disconnected",
+      description: error
+        ? "Connection failed"
+        : healthData?.services.database === "operational"
+          ? "Pool active"
+          : "Connection failed",
       icon: "CircleStackIcon",
       lastChecked: "Just now",
     },
     {
       title: "Total Response Time",
-      status: totalLatency < 500 ? "operational" : "degraded",
+      status: error ? "down" : totalLatency < 500 ? "operational" : "degraded",
       value: `${totalLatency}ms`,
       description: "Complete request round-trip",
       icon: "BoltIcon",
@@ -121,9 +132,11 @@ const SystemHealthInteractive = () => {
     },
     {
       title: "System Uptime",
-      status: "operational",
-      value: healthData ? formatUptime(healthData.uptime) : "-",
-      description: `Since ${healthData ? new Date(Date.now() - healthData.uptime * 1000).toLocaleTimeString() : "-"}`,
+      status: error ? "down" : "operational",
+      value: error ? "-" : healthData ? formatUptime(healthData.uptime) : "-",
+      description: error
+        ? "Since -"
+        : `Since ${healthData ? new Date(Date.now() - healthData.uptime * 1000).toLocaleTimeString() : "-"}`,
       icon: "ClockIcon",
       lastChecked: "Just now",
     },

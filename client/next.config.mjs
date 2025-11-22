@@ -4,14 +4,9 @@ const nextConfig = {
   async rewrites() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
 
-    // Only add rewrite if apiUrl is properly set
-    if (!apiUrl || apiUrl === "") {
-      return [];
-    }
-
     return [
       {
-        source: "/:path((?!code|healthz|_next).*)",
+        source: "/:path((?!code|healthz|_next|api|\\.swa|site|favicon|apple-touch-icon).*)",
         destination: `${apiUrl}/:path`,
       },
     ];

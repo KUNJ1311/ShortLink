@@ -5,7 +5,7 @@ import Footer from "@/components/common/Footer";
 import DashboardInteractive from "./dashboard/components/DashboardInteractive";
 
 export const metadata: Metadata = {
-  title: "Dashboard - LinkShort",
+  title: "Dashboard - ShortLink",
   description:
     "Create, manage, and monitor your shortened links with comprehensive analytics tracking and real-time click statistics.",
 };

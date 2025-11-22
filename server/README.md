@@ -1,6 +1,6 @@
-# LinkShort Server
+# ShortLink Server
 
-Backend API for LinkShort - A URL shortening service built with Express.js and MySQL.
+Backend API for ShortLink - A URL shortening service built with Express.js and MySQL.
 
 ## Features
 
@@ -30,7 +30,7 @@ PORT=3001
 DB_HOST=localhost
 DB_USER=your_username
 DB_PASSWORD=your_password
-DB_NAME=link_shortener
+DB_NAME=shortlinks
 CLIENT_BASE_URL=http://localhost:3001
 FRONTEND_URL=http://localhost:3000
 ```

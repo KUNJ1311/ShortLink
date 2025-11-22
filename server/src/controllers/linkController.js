@@ -13,10 +13,15 @@ const isValidUrl = (string) => {
 	}
 };
 
-const RESERVED_ROUTES = ["dashboard", "healthz"];
+const RESERVED_ROUTES = ["dashboard", "healthz", "code", "api"];
+const RESERVED_PREFIXES = [".swa", "site", "_next"];
 
 const isReservedCode = (code) => {
-	return RESERVED_ROUTES.includes(code.toLowerCase());
+	const lowerCode = code.toLowerCase();
+	// Check exact matches
+	if (RESERVED_ROUTES.includes(lowerCode)) return true;
+	// Check prefixes
+	return RESERVED_PREFIXES.some((prefix) => lowerCode.startsWith(prefix.toLowerCase()));
 };
 
 const createLink = async (req, res) => {

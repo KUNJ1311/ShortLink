@@ -1,6 +1,6 @@
-# LinkShort Client
+# ShortLink Client
 
-Frontend application for LinkShort - A modern URL shortening service built with Next.js 14 and Tailwind CSS.
+Frontend application for ShortLink - A modern URL shortening service built with Next.js 14 and Tailwind CSS.
 
 ## Features
 

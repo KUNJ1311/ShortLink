@@ -1,6 +1,8 @@
 "use client";
 
 import Icon from "@/components/ui/AppIcon";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +13,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
           {/* Brand Section */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex items-center gap-2 mb-2">
-              <Icon name="LinkIcon" size={24} className="text-primary" />
-              <h3 className="text-lg font-bold text-foreground">LinkShort</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <Image src="/logo.svg" alt="ShortLink Logo" width={35} height={35} />
+              <h3 className="text-lg font-bold text-foreground">ShortLink</h3>
             </div>
             <p className="text-sm text-muted-foreground text-center md:text-left">
               Fast, simple, and reliable URL shortener with analytics.
@@ -24,21 +26,21 @@ const Footer = () => {
           <div className="flex flex-col items-start justify-start">
             <h4 className="text-sm font-semibold text-foreground mb-3">Quick Links</h4>
             <div className="flex flex-col gap-2 text-sm">
-              <a href="/" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/code"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Statistics Dashboard
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/healthz"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 System Health
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -46,7 +48,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end">
             <h4 className="text-sm font-semibold text-foreground mb-3">Connect</h4>
             <div className="flex gap-4">
-              <a
+              <Link
                 href="https://github.com/KUNJ1311"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -55,8 +57,8 @@ const Footer = () => {
                 title="GitHub"
               >
                 <Icon name="CodeBracketIcon" size={20} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/in/kunj-faladu/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +67,7 @@ const Footer = () => {
                 title="LinkedIn"
               >
                 <Icon name="BriefcaseIcon" size={20} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -77,18 +79,18 @@ const Footer = () => {
               <Icon name="HeartIcon" size={16} className="text-red-500" />
               <span>
                 Built with passion by{" "}
-                <a
+                <Link
                   href="https://www.linkedin.com/in/kunj-faladu/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold text-primary hover:underline"
                 >
                   Kunj Faladu
-                </a>
+                </Link>
               </span>
             </div>
             <div className="flex items-center gap-4">
-              <span>© {currentYear} LinkShort</span>
+              <span>© {currentYear} ShortLink</span>
               <span className="hidden sm:inline">•</span>
               <span className="text-xs">v1.0.0</span>
             </div>

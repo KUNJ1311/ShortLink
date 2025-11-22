@@ -7,11 +7,17 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Next.js with Tailwind CSS",
-  description: "A boilerplate project with Next.js and Tailwind CSS",
+  title: "ShortLink - URL Shortener",
+  description: "Create short, memorable links with analytics tracking",
   icons: {
-    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -21,16 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-
-        <script
-          type="module"
-          async
-          src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Flinkshort4410back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"
-        />
-        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1" />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
