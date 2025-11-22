@@ -1,7 +1,7 @@
 {
-  "name": "linkshort-server",
+  "name": "shortlink-server",
   "version": "1.0.0",
-  "description": "Backend for LinkShort application",
+  "description": "Backend for ShortLink application",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",

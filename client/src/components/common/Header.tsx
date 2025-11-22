@@ -41,11 +41,11 @@ const Header = () => {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 transition-micro hover:opacity-80"
-          aria-label="LinkShort Home"
+          className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
+          aria-label="ShortLink Home"
         >
           <Icon name="LinkIcon" size={32} className="text-primary" />
-          <span className="text-xl font-semibold text-foreground">LinkShort</span>
+          <span className="text-xl font-semibold text-foreground">ShortLink</span>
         </Link>
 
         {/* Desktop Navigation */}

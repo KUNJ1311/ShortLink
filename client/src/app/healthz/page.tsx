@@ -5,7 +5,7 @@ import Footer from "@/components/common/Footer";
 import SystemHealthInteractive from "./components/SystemHealthInteractive";
 
 export const metadata: Metadata = {
-  title: "System Health Check - LinkShort",
+  title: "System Health Check - ShortLink",
   description:
     "Monitor real-time system status, service health, and operational metrics for the URL shortening service with comprehensive diagnostics and performance indicators.",
 };
