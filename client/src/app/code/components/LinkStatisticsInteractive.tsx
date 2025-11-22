@@ -66,7 +66,7 @@ export default function LinkStatisticsInteractive({ code }: LinkStatisticsIntera
     setDeleteError(null);
     try {
       await deleteLink(code);
-      router.push("/dashboard");
+      router.push("/code");
     } catch (err: unknown) {
       const error = err as Error & { errorCode?: string };
 
