@@ -1,6 +1,16 @@
 {
   "name": "shortlink",
   "version": "0.1.0",
+  "description": "A modern URL shortening service with analytics tracking",
+  "keywords": [
+    "url-shortener",
+    "nextjs",
+    "react",
+    "typescript",
+    "analytics",
+    "tailwindcss"
+  ],
+  "homepage": "https://github.com/KUNJ1311/ShortLink",
   "private": true,
   "scripts": {
     "dev": "next dev",

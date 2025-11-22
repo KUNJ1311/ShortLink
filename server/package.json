@@ -2,6 +2,14 @@
   "name": "shortlink-server",
   "version": "1.0.0",
   "description": "Backend for ShortLink application",
+  "keywords": [
+    "url-shortener",
+    "nodejs",
+    "express",
+    "mysql",
+    "api"
+  ],
+  "homepage": "https://github.com/KUNJ1311/ShortLink",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
