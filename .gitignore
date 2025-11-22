@@ -1,0 +1,19 @@
+# Root level
+.git
+*.log
+
+# Environment files
+.env
+
+# Next.js build output
+.next/
+out/
+
+# Production build
+build/
+
+# certificates
+certs
+
+# Node modules
+node_modules/
