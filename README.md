@@ -15,6 +15,8 @@ ShortLink allows you to create short, memorable links for long URLs. Track click
 - 🏥 **Health Monitoring** - Real-time system health dashboard
 - 🎨 **Modern UI** - Built with Next.js 14 and Tailwind CSS
 
+<img width="1897" height="1087" alt="image" src="https://github.com/user-attachments/assets/fc56086a-50e4-4336-b30a-d4756d0782e9" />
+
 ## Tech Stack
 
 ### Frontend
